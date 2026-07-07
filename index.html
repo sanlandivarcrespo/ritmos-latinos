@@ -404,10 +404,10 @@ const GROOVE_TEMPLATES = {
   // El repique (38) se atrasa en el 2 y 4, crea la "conversación"
   // El piano (36) arrastra hacia el beat, dando peso
   candombe: {
-    42: [ -12, null, -8,  null, -15, null, -10, null, -12, null, -8,  null, -15, null, -10, null ], // chico
+    75: [ -4,  null, null, -4,  null, null, -4,  null, null, null, -4,  null, -4,  null, null, null ], // madera
+    42: [ null, -12, -8,  -8,  null, -15, -8,  -8,  null, -12, -8,  -8,  null, -15, -8,  -8  ], // chico
     38: [ null, null, +22, null, null, +18, null, null, null, null, +22, null, null, +18, null, null ], // repique
-    36: [ +8,  null, null, null, +10, null, null, null, +8,  null, null, null, +10, null, null, null ], // piano
-    39: [ null, null, null, null, -5,  null, null, null, null, null, null, null, -5,  null, null, null ], // palmas
+    36: [ +8,  null, null, null, +10, null, null, +8,  null, null, +10, null, +8,  null, null, null ], // piano
   },
 
   // ── CUMBIA ────────────────────────────────────────────────────
@@ -441,10 +441,11 @@ const GROOVE_TEMPLATES = {
   // La conga: el slap anticipado, los tones abiertos atrasados
   // El bongó martillo: levemente adelantado, crea la urgencia salsera
   salsa: {
-    75: [ -5,  null, null, -5,  null, null, +18, null, null, null, -5,  null, +8,  null, null, null ], // clave 2-3
-    64: [ null, null, -10, null, null, null, -8,  null, null, null, -10, null, null, null, -8,  null ], // conga slap
-    60: [ -8,  -6,  null, -8,  -6,  null, -8,  -6,  -8,  -6,  null, -8,  -6,  null, -8,  -6  ], // bongó
-    65: [ null, null, null, null, +10, null, null, null, null, null, null, null, +10, null, null, +15], // timbal
+    75: [ -5,  null, null, +18, null, null, -5,  null, null, null, -5,  null, +8,  null, null, null ], // clave 3-2: el bombo (pos 3) cae tarde
+    65: [ -6,  null, -4,  -6,  null, -4,  null, -6,  -6,  null, -4,  null, -6,  -4,  null, -6  ], // cascara: drive adelantado
+    64: [ null, null, null, null, -10, null, null, null, null, null, null, null, -10, null, null, null ], // conga slap anticipado
+    63: [ null, null, null, null, null, null, +6,  +8,  null, null, null, null, null, null, +6,  +8  ], // conga open: tumbao relajado
+    60: [ -8,  null, -6,  null, -8,  null, -6,  null, -8,  null, -6,  null, -8,  null, -6,  null ], // bongó martillo
   },
 
   // ── TANGO ─────────────────────────────────────────────────────
@@ -480,14 +481,15 @@ const GROOVE_TEMPLATES = {
     73: [ -5,  -5,  null, null, -5,  -5,  null, null, -5,  -5,  null, null, -5,  -5,  null, null ], // güiro
   },
 
-  // ── HUAYNO ────────────────────────────────────────────────────
-  // Ritmo andino ternario — el bombo es el ancla
-  // La caja se adelanta levemente — carácter festivo
+  // ── HUAYNO (2/4 · 16 pasos) ──────────────────────────────────
+  // El bombo lleva el arrastre andino — adelantado en el 1
+  // La caja: las semicorcheas del chucu-chucu levemente apretadas
+  // La quena flota atrasada — carácter meditativo sobre el pulso
   huayno: {
-    36: [ +5,  null, null, null, +5,  null, null, null, +5,  null, null, null ], // bombo
-    38: [ null, null, -10, null, null, null, -10, null, null, null, -10, null ], // caja
-    54: [ -8,  -6,  null, -8,  -6,  null, -8,  -6,  -8,  -6,  null, -8  ], // charango
-    74: [ null, +12, null, null, +12, null, null, +12, null, null, +12, null ], // quena
+    36: [ -8,  null, null, null, null, null, null, null, -8,  null, null, null, null, null, null, null ], // bombo
+    38: [ null, null, -5,  -5,  null, null, -5,  -5,  null, null, -5,  -5,  null, null, -5,  -5  ], // caja
+    54: [ null, null, -6,  null, null, null, -6,  null, null, null, -6,  null, null, null, -6,  null ], // charango
+    74: [ null, null, null, null, +14, null, null, null, null, null, null, null, +14, null, null, null ], // quena
   },
 
   // ── VALLENATO ─────────────────────────────────────────────────
@@ -606,21 +608,15 @@ const GROOVE_TEMPLATES = {
           -5,  null, null, -5,  null, null, -5,  null, null, null, -5,  null ],
   },
 
-  // ── BAIAO (12/8 · 24 pasos) ──────────────────────────────────
-  // El zabumba aberto: ataque percusivo, siempre en grid (es el ancla)
-  // El zabumba batido (cerrado con la mano): levemente adelantado
-  // El triangulo: su sincopa cae deliberadamente tarde — identidad del baiao
+  // ── BAIAO (2/4 · 16 pasos) ───────────────────────────────────
+  // El zabumba grave es el ancla — practicamente en grid
+  // El bacalhau (la sincopa del tresillo) se adelanta — urgencia nordestina
+  // El golpe seco levemente adelantado, el triangulo respira con push-pull
   baiao: {
-    36: [ +5,  null, null, null, null, null, null, null, null, null, null, null,
-          +5,  null, null, null, null, null, null, null, null, null, null, null ],
-    35: [ null, null, null, null, null, null, -10, null, null, null, null, null,
-          null, null, null, null, null, null, -10, null, null, null, null, null ],
-    38: [ null, null, null, +10, null, null, null, null, null, +10, null, null,
-          null, null, null, +10, null, null, null, null, null, +10, null, null ],
-    54: [ null, +20, null, null, null, +18, null, null, +20, null, null, null,
-          null, +20, null, null, null, +18, null, null, +20, null, null, null ],
-    60: [ -5,  null, -5,  null, -5,  null, -5,  null, -5,  null, -5,  null,
-          -5,  null, -5,  null, -5,  null, -5,  null, -5,  null, -5,  null ],
+    36: [ +3,  null, null, null, null, null, null, null, +3,  null, null, null, null, null, null, null ],
+    38: [ null, null, null, -10, null, null, null, null, null, null, null, -10, null, null, null, null ],
+    35: [ null, null, null, null, null, null, -8,  null, null, null, null, null, null, null, -8,  null ],
+    54: [ -3,  +8,  -3,  +8,  -3,  +8,  -3,  +8,  -3,  +8,  -3,  +8,  -3,  +8,  -3,  +8  ],
   },
 
   // ── SANJUANITO (2/4 · 16 pasos) ─────────────────────────────
@@ -671,8 +667,8 @@ const GROOVE_TEMPLATES = {
   // El kagan siempre levemente adelantado — urgencia guerrera
   // El sogo (grave) tiene el "peso" africano — atrasado
   ewe: {
-    56: [ -4,  null, null, -4,  null, null, -4,  null, -4,  null, null, null,
-          -4,  null, null, -4,  null, null, -4,  null, -4,  null, null, null ],
+    56: [ -4,  null, null, null, -4,  null, null, null, -4,  null, -4,  null,
+          null, null, -4,  null, null, null, -4,  null, null, null, -4,  null ],
     54: [ -8,  null, -8,  null, -8,  null, -8,  null, -8,  null, -8,  null,
           -8,  null, -8,  null, -8,  null, -8,  null, -8,  null, -8,  null ],
     60: [ null, null, +12, null, null, +10, null, null, null, +12, null, null,
@@ -741,10 +737,10 @@ const RHYTHMS = [
     desc:'Ritmo afro-uruguayo de Montevideo. Sus tres tambores (chico, repique y piano) crean una polirritmia donde el microtiming es estructural — sin los desvíos, el candombe pierde su alma.',
     compas:'4/4', steps:16, bpm:120,
     tracks:[
-      { name:'Chico',   midi:42, color:'#e8a020', steps:[1,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0] },
+      { name:'Madera',  midi:75, color:'#f0d080', steps:[1,0,0,1,0,0,1,0,0,0,1,0,1,0,0,0] },
+      { name:'Chico',   midi:42, color:'#e8a020', steps:[0,1,0.5,0.5,0,1,0.5,0.5,0,1,0.5,0.5,0,1,0.5,0.5] },
       { name:'Repique', midi:38, color:'#c8601a', steps:[0,0,1,0,0,1,0,0,0,0,1,0,0,1,0,0] },
-      { name:'Piano',   midi:36, color:'#8a3a0a', steps:[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0] },
-      { name:'Palmas',  midi:39, color:'#f0d080', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
+      { name:'Piano',   midi:36, color:'#8a3a0a', steps:[1,0,0,0,1,0,0,1,0,0,1,0,1,0,0,0] },
     ]
   },
   { id:'cumbia', name:'Cumbia',     origin:'Colombia · Costa Atlántica',     flag:'🇨🇴',
@@ -752,7 +748,7 @@ const RHYTHMS = [
     compas:'4/4', steps:16, bpm:100,
     tracks:[
       { name:'Caja',     midi:38, color:'#e84020', steps:[1,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0] },
-      { name:'Llamador', midi:36, color:'#c82010', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Llamador', midi:36, color:'#c82010', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
       { name:'Guache',   midi:70, color:'#f09060', steps:[0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1] },
       { name:'Bombo',    midi:35, color:'#802010', steps:[1,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0] },
     ]
@@ -761,21 +757,22 @@ const RHYTHMS = [
     desc:'Símbolo musical de Brasil. El tamborim con atraso de ~25ms es la característica más documentada de su groove (Naveda et al. 2011). Sin ese desvío, la samba se vuelve plana.',
     compas:'2/4', steps:16, bpm:116,
     tracks:[
-      { name:'Surdo 1',  midi:36, color:'#20e860', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
-      { name:'Surdo 2',  midi:35, color:'#10b840', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
+      { name:'Surdo 1',  midi:36, color:'#20e860', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
+      { name:'Surdo 2',  midi:35, color:'#10b840', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
       { name:'Caixa',    midi:38, color:'#80f8a0', steps:[0,1,1,0,1,1,0,1,0,1,1,0,1,1,0,1] },
       { name:'Tamborim', midi:54, color:'#20d860', steps:[1,0,1,1,0,1,1,0,1,0,1,1,0,1,1,0] },
       { name:'Agogô',    midi:67, color:'#c8f0d0', steps:[1,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0] },
     ]
   },
-  { id:'salsa', name:'Salsa',      origin:'Cuba / Nueva York · Caribe',      flag:'🇨🇴',
-    desc:'La clave 2-3 tiene un "bombo" (3er golpe del lado fuerte) que cae ~18ms tarde — esa tensión es el corazón de la salsa. Sin ese atraso específico, la clave suena "cuadrada".',
+  { id:'salsa', name:'Salsa',      origin:'Cuba / Nueva York · Caribe',      flag:'🇨🇺',
+    desc:'La clave son 3-2 tiene un "bombo" (2do golpe del lado de 3) que cae ~18ms tarde — esa tensión es el corazón de la salsa. La cáscara de los timbales y el tumbao de conga se entrelazan con ella.',
     compas:'4/4', steps:16, bpm:96,
     tracks:[
-      { name:'Clave 2-3', midi:75, color:'#e820a8', steps:[1,0,0,1,0,0,1,0,0,0,1,0,1,0,0,0] },
-      { name:'Conga',     midi:64, color:'#b01888', steps:[0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0] },
-      { name:'Bongó',     midi:60, color:'#f080d0', steps:[1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1] },
-      { name:'Timbal',    midi:65, color:'#802060', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1] },
+      { name:'Clave 3-2',  midi:75, color:'#e820a8', steps:[1,0,0,1,0,0,1,0,0,0,1,0,1,0,0,0] },
+      { name:'Cáscara',    midi:65, color:'#802060', steps:[1,0,1,1,0,1,0,1,1,0,1,0,1,1,0,1] },
+      { name:'Conga slap', midi:64, color:'#b01888', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
+      { name:'Conga open', midi:63, color:'#d040a8', steps:[0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,1] },
+      { name:'Bongó',      midi:60, color:'#f080d0', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
     ]
   },
   { id:'tango', name:'Tango',      origin:'Argentina / Uruguay · Río de la Plata', flag:'🇦🇷',
@@ -791,9 +788,9 @@ const RHYTHMS = [
     desc:'El groove más sutil del continente. El pandeiro flota ~12ms atrás del grid, casi imperceptible — pero sin ese desvío la bossa pierde su característica sensación de levedad.',
     compas:'4/4', steps:16, bpm:130,
     tracks:[
-      { name:'Rimshot',  midi:38, color:'#20e860', steps:[0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0] },
+      { name:'Rimshot',  midi:38, color:'#20e860', steps:[1,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0] },
       { name:'Hi-hat',   midi:42, color:'#80f8a0', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
-      { name:'Surdo',    midi:36, color:'#10b840', steps:[1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0] },
+      { name:'Surdo',    midi:36, color:'#10b840', steps:[1,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0] },
       { name:'Pandeiro', midi:54, color:'#c8f0d0', steps:[0,1,0,0,1,0,1,0,0,1,0,0,1,0,1,0] },
     ]
   },
@@ -808,13 +805,13 @@ const RHYTHMS = [
     ]
   },
   { id:'huayno', name:'Huayno',    origin:'Perú / Bolivia / Ecuador · Andes', flag:'🇵🇪',
-    desc:'Uno de los ritmos más antiguos de América. Ternario quechua-aymara. La quena flota atrasada sobre el bombo, dando el carácter meditativo y festivo a la vez.',
-    compas:'2/4', steps:12, bpm:126,
+    desc:'Uno de los ritmos más antiguos de América, en 2/4 binario. Su célula es el "chucu-chucu": corchea + dos semicorcheas en cada tiempo. El bombo ancla el 1, la caja lleva la célula, la quena flota atrasada por encima.',
+    compas:'2/4', steps:16, bpm:126,
     tracks:[
-      { name:'Bombo',    midi:36, color:'#20a8e8', steps:[1,0,0,0,1,0,0,0,1,0,0,0] },
-      { name:'Caja',     midi:38, color:'#60d0f8', steps:[0,0,1,0,0,0,1,0,0,0,1,0] },
-      { name:'Charango', midi:54, color:'#20e8e8', steps:[1,1,0,1,1,0,1,1,0,1,1,0] },
-      { name:'Quena',    midi:74, color:'#a0f0f8', steps:[0,1,0,0,1,0,0,1,0,0,1,0] },
+      { name:'Bombo',    midi:36, color:'#20a8e8', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
+      { name:'Caja',     midi:38, color:'#60d0f8', steps:[1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1] },
+      { name:'Charango', midi:54, color:'#20e8e8', steps:[0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0] },
+      { name:'Quena',    midi:74, color:'#a0f0f8', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
     ]
   },
   { id:'vallenato', name:'Vallenato', origin:'Colombia · Valledupar',        flag:'🇨🇴',
@@ -828,12 +825,12 @@ const RHYTHMS = [
     ]
   },
   { id:'joropo', name:'Joropo',    origin:'Venezuela / Colombia · Los Llanos', flag:'🇻🇪',
-    desc:'Música nacional de Venezuela. El golpe (tambor) se adelanta ~15ms al pulso de las maracas — esa anticipación es el corazón del joropo llanero, lo que lo hace tan urgente.',
+    desc:'Música nacional de Venezuela. Su corazón es la sesquiáltera: el bajo alterna 3/4 y 6/8 contra las maracas — esa tensión entre lo binario y lo ternario es la identidad llanera. El golpe se adelanta ~15ms al pulso.',
     compas:'6/8', steps:12, bpm:144,
     tracks:[
       { name:'Maracas', midi:70, color:'#e84020', steps:[1,1,1,1,1,1,1,1,1,1,1,1] },
       { name:'Golpe',   midi:38, color:'#f08040', steps:[1,0,0,1,0,0,1,0,0,1,0,0] },
-      { name:'Bajo',    midi:36, color:'#802010', steps:[1,0,0,0,0,1,1,0,0,0,0,1] },
+      { name:'Bajo',    midi:36, color:'#802010', steps:[1,0,1,0,1,0,1,0,0,1,0,0] },
     ]
   },
   { id:'porro', name:'Porro',      origin:'Colombia · Córdoba / Bolívar',    flag:'🇨🇴',
@@ -910,7 +907,7 @@ const RHYTHMS = [
       { name:'Bombo legüero', midi:36, color:'#d4a820', steps:[1,0,0,1,0,0,1,0,0,1,0,0] },
       { name:'Caja',          midi:38, color:'#a88010', steps:[0,0,1,0,1,0,0,0,1,0,1,0] },
       { name:'Palmas',        midi:39, color:'#f0d060', steps:[0,1,0,0,1,0,0,1,0,0,1,0] },
-      { name:'Güiro',         midi:73, color:'#f8e8a0', steps:[1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Aro (3/4)',     midi:37, color:'#f8e8a0', steps:[1,0,1,0,1,0,1,0,1,0,1,0] },
     ]
   },
 
@@ -938,14 +935,13 @@ const RHYTHMS = [
   },
 
   { id:'baiao', name:'Baiao',     origin:'Brasil - Nordeste / Ceara',        flag:'🇧🇷',
-    desc:'Ritmo nordestino de Brasil en 12/8. El zabumba golpea abierto en tiempo 1 y cerrado (batido) en tiempo 3. El triangulo es el rey con su sincopa caracteristica entre los tiempos.',
-    compas:'12/8', steps:24, bpm:108,
+    desc:'Ritmo nordestino en 2/4 binario, construido sobre el tresillo (3-3-2). El zabumba: golpe grave abierto en el 1, bacalhau (palo en el parche superior) en la sincopa, golpe seco en el contratiempo del 2. El triangulo abre y cierra la mano marcando corcheas. Trio de Luiz Gonzaga: sanfona, zabumba, triangulo.',
+    compas:'2/4', steps:16, bpm:104,
     tracks:[
-      { name:'Zabumba aberto', midi:36, color:'#e84820', steps:[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0] },
-      { name:'Zabumba batido', midi:35, color:'#c03010', steps:[0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0] },
-      { name:'Caixa',          midi:38, color:'#f07050', steps:[0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0] },
-      { name:'Triangulo',      midi:54, color:'#f09070', steps:[0,1,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0] },
-      { name:'Pandeiro',       midi:60, color:'#f8c0a0', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Zabumba grave', midi:36, color:'#e84820', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
+      { name:'Bacalhau',      midi:38, color:'#c03010', steps:[0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0] },
+      { name:'Zabumba seco',  midi:35, color:'#f07050', steps:[0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0] },
+      { name:'Triangulo',     midi:54, color:'#f09070', steps:[1,0.5,1,0.5,1,0.5,1,0.5,1,0.5,1,0.5,1,0.5,1,0.5] },
     ]
   },
 
@@ -1022,7 +1018,7 @@ const RHYTHMS = [
     compas:'12/8', steps:24, bpm:100,
     tracks:[
       // Gankogui (cencerro doble): la clave de 12/8 — ANCLA ABSOLUTA
-      { name:'Gankogui',  midi:56, color:'#f0c030', steps:[1,0,0,1,0,0,1,0,1,0,0,0,1,0,0,1,0,0,1,0,1,0,0,0] },
+      { name:'Gankogui',  midi:56, color:'#f0c030', steps:[1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0] },
       // Kagan (tambor alto): contrapunto rapido
       { name:'Kagan',     midi:54, color:'#c09020', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
       // Kidi (tambor medio): ritmo de respuesta
@@ -1465,8 +1461,8 @@ function toggleStep(el, track, i, r) {
 function buildMidiNotes(r) {
   const el = document.getElementById('midiNotes');
   el.innerHTML = '';
-  const noteNames = {36:'C2 Kick',35:'B1 Kick2',38:'D2 Snare',39:'D#2 Clap',42:'F#2 HH-C',
-    46:'A#2 HH-O',49:'C#3 Crash',54:'F#3 Tamb',60:'C4 Bongó',64:'E4 Conga',65:'F4 Timbal',
+  const noteNames = {36:'C2 Kick',35:'B1 Kick2',37:'C#2 Rim',38:'D2 Snare',39:'D#2 Clap',42:'F#2 HH-C',
+    46:'A#2 HH-O',49:'C#3 Crash',54:'F#3 Tamb',56:'G#3 Cencerro',60:'C4 Bongó',63:'D#4 Conga-O',64:'E4 Conga-S',65:'F4 Timbal',
     67:'G4 Agogô',70:'A#4 Maracas',73:'C#5 Clave',74:'D5 Quena',75:'D#5 Güiro'};
   const seen = new Set();
   r.tracks.forEach(t => {
