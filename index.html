@@ -712,20 +712,20 @@ const GROOVE_TEMPLATES = {
     56: [ -5,  null, null, -5,  null, null, -5,  null, null, null, -5,  null, -5,  null, null, null ],
   },
 
-  // ── KECAK / POLIRRITMO (12/8 · 24 pasos) ─────────────────────
-  // Las capas de polirritmo NO deben tener groove — la tensión ES el polirritmo
-  // Solo la capa de 6 (la más rápida) tiene un leve adelanto para crear urgencia
+  // ── KECAK / KILITAN TELU (12/8 · 24 pasos) ───────────────────
+  // Cada voz del interlock con un micro-offset distinto — eso crea el "roll"
+  // El pung es el ancla absoluta; el gong cae pesado, ligeramente tarde
   kecak: {
-    56: [ null, null, null, null, null, null, null, null, null, null, null, null,
-          null, null, null, null, null, null, null, null, null, null, null, null ],
-    60: [ null, null, null, null, null, null, null, null, null, null, null, null,
-          null, null, null, null, null, null, null, null, null, null, null, null ],
-    64: [ null, null, null, null, null, null, null, null, null, null, null, null,
-          null, null, null, null, null, null, null, null, null, null, null, null ],
-    38: [ -8,  null, null, null, -8,  null, null, null, -8,  null, null, null,
-          -8,  null, null, null, -8,  null, null, null, -8,  null, null, null ],
-    36: [ +5,  null, null, null, null, null, null, null, null, null, null, null,
-          null, null, null, null, null, null, null, null, null, null, null, null ],
+    54: [ -4,  -4,  null, -4,  -4,  null, -4,  -4,  null, -4,  -4,  null,
+          -4,  -4,  null, -4,  -4,  null, -4,  -4,  null, -4,  -4,  null ],
+    60: [ null, +3,  +3,  null, +3,  +3,  null, +3,  +3,  null, +3,  +3,
+          null, +3,  +3,  null, +3,  +3,  null, +3,  +3,  null, +3,  +3  ],
+    64: [ +6,  null, +6,  +6,  null, +6,  +6,  null, +6,  +6,  null, +6,
+          +6,  null, +6,  +6,  null, +6,  +6,  null, +6,  +6,  null, +6  ],
+    56: [ -2,  null, null, null, null, null, -2,  null, null, null, null, null,
+          -2,  null, null, null, null, null, -2,  null, null, null, null, null ],
+    36: [ +8,  null, null, null, null, null, null, null, +8,  null, null, null,
+          null, null, null, null, +8,  null, null, null, null, null, null, null ],
   },
 
   // ── CACHARPAYA (2/4 · 16) ── carnaval urgente: bombo empuja adelante
@@ -845,20 +845,20 @@ const RHYTHMS = [
     desc:'Ritmo afro-uruguayo de Montevideo. Sus tres tambores (chico, repique y piano) crean una polirritmia donde el microtiming es estructural — sin los desvíos, el candombe pierde su alma.',
     compas:'4/4', steps:16, bpm:120,
     tracks:[
-      { name:'Madera',  midi:75, color:'#f0d080', steps:[1,0,0,1,0,0,1,0,0,0,1,0,1,0,0,0] },
-      { name:'Chico',   midi:42, color:'#e8a020', steps:[0,1,0.5,0.5,0,1,0.5,0.5,0,1,0.5,0.5,0,1,0.5,0.5] },
-      { name:'Repique', midi:38, color:'#c8601a', steps:[0,0,1,0,0,1,0,0,0,0,1,0,0,1,0,0] },
-      { name:'Piano',   midi:36, color:'#8a3a0a', steps:[1,0,0,0,1,0,0,1,0,0,1,0,1,0,0,0] },
+      { name:'Madera',  midi:75, color:'#f0d080', steps:[1,0,0,0.8,0,0,0.8,0,0,0,0.85,0,0.9,0,0,0] },
+      { name:'Chico',   midi:42, color:'#e8a020', steps:[0,0.95,0.4,0.4,0,0.95,0.4,0.4,0,0.95,0.4,0.4,0,0.95,0.4,0.4] },
+      { name:'Repique', midi:38, color:'#c8601a', steps:[0,0,0.85,0,0,0.65,0,0,0,0,0.9,0,0,0.7,0,0] },
+      { name:'Piano',   midi:36, color:'#8a3a0a', steps:[1,0,0,0,0.8,0,0,0.9,0,0,0.75,0,0.85,0,0,0] },
     ]
   },
   { id:'cumbia', name:'Cumbia',     origin:'Colombia · Costa Atlántica',     flag:'🇨🇴',
     desc:'Ritmo colombiano de raíces africanas, indígenas y europeas. La caja anticipada y el llamador en grid crean una tensión que hace mover el cuerpo involuntariamente.',
     compas:'4/4', steps:16, bpm:100,
     tracks:[
-      { name:'Caja',     midi:38, color:'#e84020', steps:[1,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0] },
-      { name:'Llamador', midi:36, color:'#c82010', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
-      { name:'Guache',   midi:70, color:'#f09060', steps:[0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1] },
-      { name:'Bombo',    midi:35, color:'#802010', steps:[1,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0] },
+      { name:'Caja',     midi:38, color:'#e84020', steps:[1,0,0,0.7,0,0,0.8,0,0.95,0,0,0.7,0,0,0.8,0] },
+      { name:'Llamador', midi:36, color:'#c82010', steps:[0,0,0,0,0.9,0,0,0,0,0,0,0,0.9,0,0,0] },
+      { name:'Guache',   midi:70, color:'#f09060', steps:[0,0.7,0,0.5,0,0.7,0,0.5,0,0.7,0,0.5,0,0.7,0,0.5] },
+      { name:'Bombo',    midi:35, color:'#802010', steps:[1,0,0,0,0,0,0.8,0,0.95,0,0,0,0,0,0.8,0] },
     ]
   },
   { id:'samba', name:'Samba',      origin:'Brasil · Bahia / Rio de Janeiro', flag:'🇧🇷',
@@ -866,50 +866,50 @@ const RHYTHMS = [
     compas:'2/4', steps:16, bpm:116,
     tracks:[
       { name:'Surdo 1',  midi:36, color:'#20e860', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
-      { name:'Surdo 2',  midi:35, color:'#10b840', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
-      { name:'Caixa',    midi:38, color:'#80f8a0', steps:[0,1,1,0,1,1,0,1,0,1,1,0,1,1,0,1] },
-      { name:'Tamborim', midi:54, color:'#20d860', steps:[1,0,1,1,0,1,1,0,1,0,1,1,0,1,1,0] },
-      { name:'Agogô',    midi:67, color:'#c8f0d0', steps:[1,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0] },
+      { name:'Surdo 2',  midi:35, color:'#10b840', steps:[0.65,0,0,0,0,0,0,0,0.65,0,0,0,0,0,0,0] },
+      { name:'Caixa',    midi:38, color:'#80f8a0', steps:[0,0.8,0.45,0,0.8,0.45,0,0.85,0,0.8,0.45,0,0.8,0.45,0,0.85] },
+      { name:'Tamborim', midi:54, color:'#20d860', steps:[0.9,0,0.6,0.75,0,0.9,0.6,0,0.9,0,0.6,0.75,0,0.9,0.6,0] },
+      { name:'Agogô',    midi:67, color:'#c8f0d0', steps:[0.8,0,0,0.6,0,0,0.8,0,0.6,0,0,0.8,0,0,0.6,0] },
     ]
   },
   { id:'salsa', name:'Salsa',      origin:'Cuba / Nueva York · Caribe',      flag:'🇨🇺',
     desc:'La clave son 3-2 tiene un "bombo" (2do golpe del lado de 3) que cae ~18ms tarde — esa tensión es el corazón de la salsa. La cáscara de los timbales y el tumbao de conga se entrelazan con ella.',
     compas:'4/4', steps:16, bpm:96,
     tracks:[
-      { name:'Clave 3-2',  midi:75, color:'#e820a8', steps:[1,0,0,1,0,0,1,0,0,0,1,0,1,0,0,0] },
-      { name:'Cáscara',    midi:65, color:'#802060', steps:[1,0,1,1,0,1,0,1,1,0,1,0,1,1,0,1] },
+      { name:'Clave 3-2',  midi:75, color:'#e820a8', steps:[0.85,0,0,1,0,0,0.85,0,0,0,0.85,0,0.85,0,0,0] },
+      { name:'Cáscara',    midi:65, color:'#802060', steps:[0.85,0,0.6,0.6,0,0.85,0,0.6,0.85,0,0.6,0,0.6,0.85,0,0.6] },
       { name:'Conga slap', midi:64, color:'#b01888', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
-      { name:'Conga open', midi:63, color:'#d040a8', steps:[0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,1] },
-      { name:'Bongó',      midi:60, color:'#f080d0', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Conga open', midi:63, color:'#d040a8', steps:[0,0,0,0,0,0,0.75,0.85,0,0,0,0,0,0,0.75,0.85] },
+      { name:'Bongó',      midi:60, color:'#f080d0', steps:[0.8,0,0.5,0,0.7,0,0.5,0,0.8,0,0.5,0,0.7,0,0.5,0] },
     ]
   },
   { id:'tango', name:'Tango',      origin:'Argentina / Uruguay · Río de la Plata', flag:'🇦🇷',
     desc:'El contratiempo del tango se adelanta deliberadamente (~16-18ms). Ese anticipo crea la tensión y el drama que define al 2×4. El marcato, en cambio, es el ancla absoluta.',
     compas:'4/4', steps:16, bpm:60,
     tracks:[
-      { name:'Marcato',      midi:36, color:'#e8a020', steps:[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0] },
-      { name:'Contratiempo', midi:38, color:'#c88010', steps:[0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0] },
-      { name:'Síncopa',      midi:42, color:'#f0d080', steps:[0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1] },
+      { name:'Marcato',      midi:36, color:'#e8a020', steps:[1,0,0,0,0.8,0,0,0,0.9,0,0,0,0.8,0,0,0] },
+      { name:'Contratiempo', midi:38, color:'#c88010', steps:[0,0,0.9,0,0,0,0.9,0,0,0,0.9,0,0,0,0.9,0] },
+      { name:'Síncopa',      midi:42, color:'#f0d080', steps:[0,0.5,0,0.5,0,0.5,0,0.5,0,0.5,0,0.5,0,0.5,0,0.5] },
     ]
   },
   { id:'bossanova', name:'Bossa Nova', origin:'Brasil · Rio de Janeiro',     flag:'🇧🇷',
     desc:'El groove más sutil del continente. El pandeiro flota ~12ms atrás del grid, casi imperceptible — pero sin ese desvío la bossa pierde su característica sensación de levedad.',
     compas:'4/4', steps:16, bpm:130,
     tracks:[
-      { name:'Rimshot',  midi:38, color:'#20e860', steps:[1,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0] },
-      { name:'Hi-hat',   midi:42, color:'#80f8a0', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
-      { name:'Surdo',    midi:36, color:'#10b840', steps:[1,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0] },
-      { name:'Pandeiro', midi:54, color:'#c8f0d0', steps:[0,1,0,0,1,0,1,0,0,1,0,0,1,0,1,0] },
+      { name:'Rimshot',  midi:38, color:'#20e860', steps:[0.8,0,0,0.75,0,0,0.8,0,0,0,0.8,0,0,0.75,0,0] },
+      { name:'Hi-hat',   midi:42, color:'#80f8a0', steps:[0.65,0,0.45,0,0.65,0,0.45,0,0.65,0,0.45,0,0.65,0,0.45,0] },
+      { name:'Surdo',    midi:36, color:'#10b840', steps:[0.9,0,0,0,0,0,0.7,0,0.9,0,0,0,0,0,0.7,0] },
+      { name:'Pandeiro', midi:54, color:'#c8f0d0', steps:[0,0.55,0,0,0.6,0,0.5,0,0,0.55,0,0,0.6,0,0.5,0] },
     ]
   },
   { id:'mambo', name:'Mambo',      origin:'Cuba · La Habana',               flag:'🇨🇺',
     desc:'Creado por Pérez Prado. Los timbales llevan el cascara anticipado en los beats impares — esa anticipación crea el drive explosivo del mambo que enloquecía el Palladium.',
     compas:'4/4', steps:16, bpm:104,
     tracks:[
-      { name:'Clave',    midi:75, color:'#e820a8', steps:[1,0,0,1,0,0,1,0,0,0,1,0,1,0,0,0] },
-      { name:'Timbales', midi:65, color:'#f080d0', steps:[0,1,0,1,1,0,1,0,0,1,0,1,1,0,1,0] },
-      { name:'Congas',   midi:64, color:'#b01888', steps:[1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1] },
-      { name:'Güiro',    midi:73, color:'#d040a0', steps:[1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0] },
+      { name:'Clave',    midi:75, color:'#e820a8', steps:[0.85,0,0,1,0,0,0.85,0,0,0,0.85,0,0.85,0,0,0] },
+      { name:'Timbales', midi:65, color:'#f080d0', steps:[0,0.7,0,0.7,0.9,0,0.7,0,0,0.7,0,0.7,0.9,0,0.7,0] },
+      { name:'Congas',   midi:64, color:'#b01888', steps:[0.8,0,0.6,0,0,0.7,0,0.85,0.8,0,0.6,0,0,0.7,0,0.85] },
+      { name:'Güiro',    midi:73, color:'#d040a0', steps:[0.8,0.5,0,0,0.8,0.5,0,0,0.8,0.5,0,0,0.8,0.5,0,0] },
     ]
   },
   { id:'huayno', name:'Huayno',    origin:'Perú / Bolivia / Ecuador · Andes', flag:'🇵🇪',
@@ -917,48 +917,48 @@ const RHYTHMS = [
     compas:'2/4', steps:16, bpm:126,
     tracks:[
       { name:'Bombo',    midi:36, color:'#20a8e8', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
-      { name:'Caja',     midi:38, color:'#60d0f8', steps:[1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1] },
-      { name:'Charango', midi:54, color:'#20e8e8', steps:[0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0] },
-      { name:'Quena',    midi:74, color:'#a0f0f8', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
+      { name:'Caja',     midi:38, color:'#60d0f8', steps:[0.9,0,0.5,0.55,0.9,0,0.5,0.55,0.9,0,0.5,0.55,0.9,0,0.5,0.55] },
+      { name:'Charango', midi:54, color:'#20e8e8', steps:[0,0,0.6,0,0,0,0.6,0,0,0,0.6,0,0,0,0.6,0] },
+      { name:'Quena',    midi:74, color:'#a0f0f8', steps:[0,0,0,0,0.75,0,0,0,0,0,0,0,0.75,0,0,0] },
     ]
   },
   { id:'vallenato', name:'Vallenato', origin:'Colombia · Valledupar',        flag:'🇨🇴',
     desc:'Patrimonio de la humanidad. La caja vallenata se anticipa consistentemente (~12ms), creando ese arrastre característico que diferencia el vallenato de otros ritmos del Caribe.',
     compas:'4/4', steps:16, bpm:110,
     tracks:[
-      { name:'Caja',       midi:38, color:'#e84020', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
-      { name:'Guacharaca', midi:73, color:'#f08060', steps:[1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1] },
-      { name:'Bombo',      midi:36, color:'#802010', steps:[1,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0] },
-      { name:'Maracas',    midi:70, color:'#f0c8a0', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Caja',       midi:38, color:'#e84020', steps:[0.85,0,0.6,0,0.7,0,0.6,0,0.85,0,0.6,0,0.7,0,0.6,0] },
+      { name:'Guacharaca', midi:73, color:'#f08060', steps:[0.8,0.5,0,0.6,0.8,0,0.5,0.6,0,0.8,0.5,0,0.6,0.8,0,0.5] },
+      { name:'Bombo',      midi:36, color:'#802010', steps:[1,0,0,0,0,0,0.8,0,0.95,0,0,0,0,0,0.8,0] },
+      { name:'Maracas',    midi:70, color:'#f0c8a0', steps:[0.65,0,0.5,0,0.65,0,0.5,0,0.65,0,0.5,0,0.65,0,0.5,0] },
     ]
   },
   { id:'joropo', name:'Joropo',    origin:'Venezuela / Colombia · Los Llanos', flag:'🇻🇪',
     desc:'Música nacional de Venezuela. Su corazón es la sesquiáltera: el bajo alterna 3/4 y 6/8 contra las maracas — esa tensión entre lo binario y lo ternario es la identidad llanera. El golpe se adelanta ~15ms al pulso.',
     compas:'6/8', steps:12, bpm:144,
     tracks:[
-      { name:'Maracas', midi:70, color:'#e84020', steps:[1,1,1,1,1,1,1,1,1,1,1,1] },
-      { name:'Golpe',   midi:38, color:'#f08040', steps:[1,0,0,1,0,0,1,0,0,1,0,0] },
-      { name:'Bajo',    midi:36, color:'#802010', steps:[1,0,1,0,1,0,1,0,0,1,0,0] },
+      { name:'Maracas', midi:70, color:'#e84020', steps:[0.9,0.55,0.6,0.9,0.55,0.6,0.9,0.55,0.6,0.9,0.55,0.6] },
+      { name:'Golpe',   midi:38, color:'#f08040', steps:[0.85,0,0,0.85,0,0,0.85,0,0,0.85,0,0] },
+      { name:'Bajo',    midi:36, color:'#802010', steps:[0.8,0,0.8,0,0.8,0,1,0,0,0.85,0,0] },
     ]
   },
   { id:'porro', name:'Porro',      origin:'Colombia · Córdoba / Bolívar',    flag:'🇨🇴',
     desc:'Ritmo de bandas de viento de la costa colombiana. La llamada se atrasa deliberadamente (~12-15ms) — esa hesitación es característica y le da el sabor cordobés.',
     compas:'2/4', steps:16, bpm:100,
     tracks:[
-      { name:'Tambor mayor', midi:36, color:'#e84020', steps:[1,0,0,1,0,1,0,0,1,0,0,1,0,1,0,0] },
-      { name:'Llamada',      midi:38, color:'#c82010', steps:[0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0] },
-      { name:'Platillos',    midi:49, color:'#f09060', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Tambor mayor', midi:36, color:'#e84020', steps:[1,0,0,0.7,0,0.8,0,0,0.95,0,0,0.7,0,0.8,0,0] },
+      { name:'Llamada',      midi:38, color:'#c82010', steps:[0,0,0.75,0,0,0,0.75,0,0,0,0.75,0,0,0,0.75,0] },
+      { name:'Platillos',    midi:49, color:'#f09060', steps:[0.8,0,0.55,0,0.8,0,0.55,0,0.8,0,0.55,0,0.8,0,0.55,0] },
     ]
   },
   { id:'maracatu', name:'Maracatu', origin:'Brasil · Pernambuco / Recife',   flag:'🇧🇷',
     desc:'Ritmo afrobrasileño de Recife. La alfaia grave se atrasa ~15-18ms — ese "peso" deliberado es lo que da al maracatu su carácter solemne y procesional, como un barco pesado.',
     compas:'4/4', steps:16, bpm:80,
     tracks:[
-      { name:'Alfaia grave', midi:36, color:'#20e860', steps:[1,0,0,0,1,0,1,0,1,0,0,0,1,0,1,0] },
-      { name:'Alfaia media', midi:35, color:'#10b840', steps:[0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,1] },
-      { name:'Caixa',        midi:38, color:'#80f8a0', steps:[0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1] },
-      { name:'Ganzá',        midi:70, color:'#c8f0d0', steps:[1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1] },
-      { name:'Agbê',         midi:54, color:'#40d060', steps:[1,0,1,0,0,1,0,0,1,0,1,0,0,1,0,0] },
+      { name:'Alfaia grave', midi:36, color:'#20e860', steps:[1,0,0,0,0.9,0,0.95,0,1,0,0,0,0.9,0,0.95,0] },
+      { name:'Alfaia media', midi:35, color:'#10b840', steps:[0,0,0.8,0,0,0,0,0.8,0,0,0.8,0,0,0,0,0.8] },
+      { name:'Caixa',        midi:38, color:'#80f8a0', steps:[0,0.55,0,0.55,0,0.55,0,0.6,0,0.55,0,0.55,0,0.55,0,0.6] },
+      { name:'Ganzá',        midi:70, color:'#c8f0d0', steps:[0.6,0.45,0,0.5,0.6,0,0.45,0.5,0,0.6,0.45,0,0.5,0.6,0,0.45] },
+      { name:'Agbê',         midi:54, color:'#40d060', steps:[0.75,0,0.6,0,0,0.7,0,0,0.75,0,0.6,0,0,0.7,0,0] },
     ]
   },
 
@@ -968,10 +968,10 @@ const RHYTHMS = [
     desc:'Ritmo afropuertorriqueno en 2/2 (cut time). El barril primo improvisa siguiendo al bailador. Los 16 pasos representan 2 compases de 2/2 — cada grupo de 4 es un tiempo de blanca.',
     compas:'2/2', steps:16, bpm:112,
     tracks:[
-      { name:'Barril primo',   midi:64, color:'#ff6030', steps:[1,0,1,1,0,1,0,1,1,0,1,0,1,1,0,1] },
-      { name:'Barril buleador',midi:36, color:'#c84020', steps:[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0] },
-      { name:'Cua',            midi:75, color:'#f09060', steps:[1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1] },
-      { name:'Palitos',        midi:73, color:'#f8c090', steps:[0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0] },
+      { name:'Barril primo',   midi:64, color:'#ff6030', steps:[0.9,0,0.6,0.75,0,0.85,0,0.7,0.9,0,0.65,0,0.8,0.7,0,0.85] },
+      { name:'Barril buleador',midi:36, color:'#c84020', steps:[1,0,0,0,0.8,0,0,0,0.9,0,0,0,0.8,0,0,0] },
+      { name:'Cua',            midi:75, color:'#f09060', steps:[0.75,0.55,0,0.65,0.75,0,0.55,0.65,0,0.75,0.55,0,0.65,0.75,0,0.55] },
+      { name:'Palitos',        midi:73, color:'#f8c090', steps:[0,0.6,0,0,0.6,0,0,0.6,0,0,0.6,0,0,0.6,0,0] },
     ]
   },
 
@@ -979,10 +979,10 @@ const RHYTHMS = [
     desc:'Música y baile nacional de RD. El merengue típico tiene la tambora como corazón — su golpe en el lado del parche y en el aro crea una textura única. El güiro marca el pulso implacable.',
     compas:'2/4', steps:16, bpm:132,
     tracks:[
-      { name:'Tambora',  midi:38, color:'#e82040', steps:[1,0,1,0,0,1,0,0,1,0,1,0,0,1,0,0] },
-      { name:'Aro',      midi:37, color:'#c81030', steps:[0,0,0,1,0,0,1,0,0,0,0,1,0,0,1,0] },
-      { name:'Güira',    midi:70, color:'#f09090', steps:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1] },
-      { name:'Balsié',   midi:36, color:'#801020', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
+      { name:'Tambora',  midi:38, color:'#e82040', steps:[0.95,0,0.7,0,0,0.75,0,0,0.95,0,0.7,0,0,0.75,0,0] },
+      { name:'Aro',      midi:37, color:'#c81030', steps:[0,0,0,0.6,0,0,0.6,0,0,0,0,0.6,0,0,0.6,0] },
+      { name:'Güira',    midi:70, color:'#f09090', steps:[0.8,0.5,0.55,0.5,0.8,0.5,0.55,0.5,0.8,0.5,0.55,0.5,0.8,0.5,0.55,0.5] },
+      { name:'Balsié',   midi:36, color:'#801020', steps:[0.9,0,0,0,0,0,0,0,0.9,0,0,0,0,0,0,0] },
     ]
   },
 
@@ -990,10 +990,10 @@ const RHYTHMS = [
     desc:'El "periódico cantado" de Puerto Rico. Tres panderetas de distintos tamaños crean el tejido rítmico — el requinto improvisa sobre el seguidor y el salidor que marcan el pulso.',
     compas:'2/4', steps:16, bpm:108,
     tracks:[
-      { name:'Requinto', midi:54, color:'#ff4080', steps:[1,0,1,1,0,0,1,0,1,1,0,1,0,0,1,0] },
-      { name:'Seguidor', midi:60, color:'#c83060', steps:[1,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0] },
-      { name:'Salidor',  midi:36, color:'#802040', steps:[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0] },
-      { name:'Palitos',  midi:73, color:'#f080a0', steps:[0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1] },
+      { name:'Requinto', midi:54, color:'#ff4080', steps:[0.9,0,0.65,0.8,0,0,0.85,0,0.9,0.6,0,0.75,0,0,0.85,0] },
+      { name:'Seguidor', midi:60, color:'#c83060', steps:[1,0,0,0.7,0,0,0.8,0,0.9,0,0,0.7,0,0,0.8,0] },
+      { name:'Salidor',  midi:36, color:'#802040', steps:[0.85,0,0,0,0.85,0,0,0,0.85,0,0,0,0.85,0,0,0] },
+      { name:'Palitos',  midi:73, color:'#f080a0', steps:[0,0.55,0,0.55,0,0.55,0,0.55,0,0.55,0,0.55,0,0.55,0,0.55] },
     ]
   },
 
@@ -1001,10 +1001,10 @@ const RHYTHMS = [
     desc:'Ritmo navideño del Zulia venezolano, pero que se toca todo el año. El furruco (tambor de fricción) da el timbre característico. Ritmo en 2/4 con fuerte acento en el segundo tiempo.',
     compas:'2/4', steps:16, bpm:118,
     tracks:[
-      { name:'Furruco',  midi:36, color:'#20c8e8', steps:[1,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0] },
-      { name:'Tambora',  midi:38, color:'#1098b8', steps:[0,0,1,0,0,1,0,0,0,0,1,0,0,1,0,0] },
-      { name:'Charrasca',midi:70, color:'#80e8f8', steps:[1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1] },
-      { name:'Cuatro',   midi:54, color:'#c0f0f8', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Furruco',  midi:36, color:'#20c8e8', steps:[0.95,0,0,0.75,0,0,0.85,0,0.95,0,0,0.75,0,0,0.85,0] },
+      { name:'Tambora',  midi:38, color:'#1098b8', steps:[0,0,0.75,0,0,0.7,0,0,0,0,0.75,0,0,0.7,0,0] },
+      { name:'Charrasca',midi:70, color:'#80e8f8', steps:[0.7,0.5,0,0.6,0.7,0,0.5,0.6,0,0.7,0.5,0,0.6,0.7,0,0.5] },
+      { name:'Cuatro',   midi:54, color:'#c0f0f8', steps:[0.7,0,0.55,0,0.7,0,0.55,0,0.7,0,0.55,0,0.7,0,0.55,0] },
     ]
   },
 
@@ -1012,10 +1012,10 @@ const RHYTHMS = [
     desc:'Ritmo folclórico del norte argentino en 6/8. La caja santiagueña marca el contrapunto con el bombo legüero. Patrón ternario que choca deliciosamente con el fraseo binario de la guitarra.',
     compas:'6/8', steps:12, bpm:120,
     tracks:[
-      { name:'Bombo legüero', midi:36, color:'#d4a820', steps:[1,0,0,1,0,0,1,0,0,1,0,0] },
-      { name:'Caja',          midi:38, color:'#a88010', steps:[0,0,1,0,1,0,0,0,1,0,1,0] },
-      { name:'Palmas',        midi:39, color:'#f0d060', steps:[0,1,0,0,1,0,0,1,0,0,1,0] },
-      { name:'Aro (3/4)',     midi:37, color:'#f8e8a0', steps:[1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Bombo legüero', midi:36, color:'#d4a820', steps:[1,0,0,0.8,0,0,1,0,0,0.8,0,0] },
+      { name:'Caja',          midi:38, color:'#a88010', steps:[0,0,0.65,0,0.7,0,0,0,0.65,0,0.7,0] },
+      { name:'Palmas',        midi:39, color:'#f0d060', steps:[0,0.6,0,0,0.6,0,0,0.6,0,0,0.6,0] },
+      { name:'Aro (3/4)',     midi:37, color:'#f8e8a0', steps:[0.8,0,0.65,0,0.65,0,0.8,0,0.65,0,0.65,0] },
     ]
   },
 
@@ -1023,10 +1023,10 @@ const RHYTHMS = [
     desc:'Ritmo afropacífico del sur de Colombia y norte de Ecuador. Los cununos (macho y hembra) dialogan sobre el bordón del bombo. Música de la región del Chocó y Nariño.',
     compas:'6/8', steps:12, bpm:104,
     tracks:[
-      { name:'Cununo macho',  midi:64, color:'#20d090', steps:[1,0,0,1,0,1,1,0,0,1,0,1] },
-      { name:'Cununo hembra', midi:60, color:'#10a870', steps:[0,1,0,0,1,0,0,1,0,0,1,0] },
+      { name:'Cununo macho',  midi:64, color:'#20d090', steps:[0.9,0,0,0.75,0,0.85,0.9,0,0,0.75,0,0.85] },
+      { name:'Cununo hembra', midi:60, color:'#10a870', steps:[0,0.6,0,0,0.6,0,0,0.6,0,0,0.6,0] },
       { name:'Bombo',         midi:36, color:'#086040', steps:[1,0,0,0,0,0,1,0,0,0,0,0] },
-      { name:'Canaletes',     midi:75, color:'#80e8c0', steps:[1,1,0,1,1,0,1,1,0,1,1,0] },
+      { name:'Canaletes',     midi:75, color:'#80e8c0', steps:[0.7,0.5,0,0.7,0.5,0,0.7,0.5,0,0.7,0.5,0] },
     ]
   },
 
@@ -1034,11 +1034,11 @@ const RHYTHMS = [
     desc:'Ritmo afroperuano de la costa en 12/8. El cajon marca el bombo en tiempo 1 y el slap en tiempo 3. La quijada raspa en los off-beats de cada grupo ternario. 4 tiempos de 3 corcheas.',
     compas:'12/8', steps:24, bpm:116,
     tracks:[
-      { name:'Cajon grave', midi:36, color:'#e8b040', steps:[1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0] },
-      { name:'Cajon slap',  midi:38, color:'#c89020', steps:[0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0] },
-      { name:'Quijada',     midi:70, color:'#f8d060', steps:[0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1] },
-      { name:'Palmas',      midi:39, color:'#f0e8a0', steps:[0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0] },
-      { name:'Cencerro',    midi:56, color:'#f8c870', steps:[1,0,0,1,0,0,1,0,0,0,1,0,1,0,0,1,0,0,1,0,0,0,1,0] },
+      { name:'Cajon grave', midi:36, color:'#e8b040', steps:[1,0,0,0,0,0,0,0.9,0,0,0,0,1,0,0,0,0,0,0,0.9,0,0,0,0] },
+      { name:'Cajon slap',  midi:38, color:'#c89020', steps:[0,0,0,0.9,0,0,0,0,0,0.85,0,0,0,0,0,0.9,0,0,0,0,0,0.85,0,0] },
+      { name:'Quijada',     midi:70, color:'#f8d060', steps:[0,0.6,0.45,0,0.6,0.45,0,0.6,0.45,0,0.6,0.45,0,0.6,0.45,0,0.6,0.45,0,0.6,0.45,0,0.6,0.45] },
+      { name:'Palmas',      midi:39, color:'#f0e8a0', steps:[0,0,0,0,0,0,0.7,0,0,0,0,0,0,0,0,0,0,0,0.7,0,0,0,0,0] },
+      { name:'Cencerro',    midi:56, color:'#f8c870', steps:[0.85,0,0,0.6,0,0,0.8,0,0,0,0.6,0,0.85,0,0,0.6,0,0,0.8,0,0,0,0.6,0] },
     ]
   },
 
@@ -1047,9 +1047,9 @@ const RHYTHMS = [
     compas:'2/4', steps:16, bpm:104,
     tracks:[
       { name:'Zabumba grave', midi:36, color:'#e84820', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
-      { name:'Bacalhau',      midi:38, color:'#c03010', steps:[0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0] },
-      { name:'Zabumba seco',  midi:35, color:'#f07050', steps:[0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0] },
-      { name:'Triangulo',     midi:54, color:'#f09070', steps:[1,0.5,1,0.5,1,0.5,1,0.5,1,0.5,1,0.5,1,0.5,1,0.5] },
+      { name:'Bacalhau',      midi:38, color:'#c03010', steps:[0,0,0,0.6,0,0,0,0,0,0,0,0.6,0,0,0,0] },
+      { name:'Zabumba seco',  midi:35, color:'#f07050', steps:[0,0,0,0,0,0,0.7,0,0,0,0,0,0,0,0.7,0] },
+      { name:'Triangulo',     midi:54, color:'#f09070', steps:[0.8,0.4,0.8,0.4,0.8,0.4,0.8,0.4,0.8,0.4,0.8,0.4,0.8,0.4,0.8,0.4] },
     ]
   },
 
@@ -1063,13 +1063,13 @@ const RHYTHMS = [
     tracks:[
       // Bombo andino: golpe en "1" (pos 0), golpe sincopado en "y del 2" (pos 10)
       // En 16 pasos de 2/4: pos 0=tiempo1, pos4=y1, pos8=tiempo2, pos12=y2
-      { name:'Bombo',     midi:36, color:'#f5a800', steps:[1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0] },
+      { name:'Bombo',     midi:36, color:'#f5a800', steps:[1,0,0,0,0,0,0,0,0.9,0,0.95,0,0,0,0,0] },
       // Redoblante: golpe en tiempo 2 (pos 8) y a veces en el "y del 1" (pos 4)
-      { name:'Redoblante',midi:38, color:'#d48000', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
+      { name:'Redoblante',midi:38, color:'#d48000', steps:[0,0,0,0,0.7,0,0,0,0,0,0,0,0.7,0,0,0] },
       // Chajchas / güiro: marcan todas las corcheas — el pulso continuo
-      { name:'Chajchas',  midi:70, color:'#f8c840', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Chajchas',  midi:70, color:'#f8c840', steps:[0.7,0,0.5,0,0.7,0,0.5,0,0.7,0,0.5,0,0.7,0,0.5,0] },
       // Platillo / hit-hat: acentua contratiempos
-      { name:'Hi-hat',    midi:42, color:'#fff0a0', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
+      { name:'Hi-hat',    midi:42, color:'#fff0a0', steps:[0,0,0,0,0.5,0,0,0,0,0,0,0,0.5,0,0,0] },
     ]
   },
 
@@ -1078,13 +1078,13 @@ const RHYTHMS = [
     compas:'2/4', steps:16, bpm:120,
     tracks:[
       // Bombo: tiempos 1 y 3 — ancla de la marcha
-      { name:'Bombo',      midi:36, color:'#e03020', steps:[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0] },
+      { name:'Bombo',      midi:36, color:'#e03020', steps:[1,0,0,0,0.85,0,0,0,1,0,0,0,0.85,0,0,0] },
       // Redoblante: tiempo 2 y 4 — el "dos" de la marcha
-      { name:'Redoblante', midi:38, color:'#b02010', steps:[0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1] },
+      { name:'Redoblante', midi:38, color:'#b02010', steps:[0,0,0,0,0,0,0,0.8,0,0,0,0,0,0,0,0.8] },
       // Rufle: semicorcheas entre los golpes — textura de banda de pueblo
-      { name:'Rufle',      midi:37, color:'#f07060', steps:[0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,0] },
+      { name:'Rufle',      midi:37, color:'#f07060', steps:[0,0.45,0,0.5,0,0.45,0,0,0,0.45,0,0.5,0,0.45,0,0] },
       // Platillo: acentua el "1" de cada compas
-      { name:'Platillo',   midi:49, color:'#f8a090', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
+      { name:'Platillo',   midi:49, color:'#f8a090', steps:[0.9,0,0,0,0,0,0,0,0.9,0,0,0,0,0,0,0] },
     ]
   },
 
@@ -1092,10 +1092,10 @@ const RHYTHMS = [
     desc:'Ritmo mestizo ecuatoriano en 6/8. Segun la USFQ, el bombo cae en el primer y cuarto pulso de corchea. El redoblante en el tercer pulso. El rasgueo de guitarra marca la celula ternaria caracteristica. Tempo: negra con punto a 102-112 bpm.',
     compas:'6/8', steps:12, bpm:108,
     tracks:[
-      { name:'Bombo',      midi:36, color:'#8040e0', steps:[1,0,0,0,0,0,1,0,0,0,0,0] },
-      { name:'Redoblante', midi:38, color:'#6020c0', steps:[0,0,0,0,1,0,0,0,0,0,1,0] },
-      { name:'Rasgueo',    midi:54, color:'#c080f8', steps:[1,0,1,0,1,0,1,0,1,0,1,0] },
-      { name:'Platillo',   midi:49, color:'#e0b0ff', steps:[1,0,0,1,0,0,1,0,0,1,0,0] },
+      { name:'Bombo',      midi:36, color:'#8040e0', steps:[1,0,0,0,0,0,0.85,0,0,0,0,0] },
+      { name:'Redoblante', midi:38, color:'#6020c0', steps:[0,0,0,0,0.7,0,0,0,0,0,0.7,0] },
+      { name:'Rasgueo',    midi:54, color:'#c080f8', steps:[0.85,0,0.6,0,0.6,0,0.85,0,0.6,0,0.6,0] },
+      { name:'Platillo',   midi:49, color:'#e0b0ff', steps:[0.7,0,0,0.6,0,0,0.7,0,0,0.6,0,0] },
     ]
   },
 
@@ -1107,13 +1107,13 @@ const RHYTHMS = [
       // En 12 pasos de 6/8: negra=2 pasos, corchea=1 paso
       // patron: [negra(2)] [corchea(1)] [corchea(1)] [negra con acento(2)]
       // = pos 0-1 ON, 2 ON, 3 ON, 4-5 ON(acento)
-      { name:'Tambor Bomba', midi:36, color:'#20c060', steps:[1,0,1,1,0,1,1,0,1,1,0,1] },
+      { name:'Tambor Bomba', midi:36, color:'#20c060', steps:[0.8,0,0.6,0.6,0,1,0.8,0,0.6,0.6,0,1] },
       // Golpe en aro: refuerza el acento final de la celula
-      { name:'Golpe aro',    midi:38, color:'#10a040', steps:[0,0,0,0,1,0,0,0,0,0,1,0] },
+      { name:'Golpe aro',    midi:38, color:'#10a040', steps:[0,0,0,0,0.7,0,0,0,0,0,0.7,0] },
       // Guiro / maracas: pulso continuo de corcheas
-      { name:'Guiro',        midi:70, color:'#80f0a0', steps:[1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Guiro',        midi:70, color:'#80f0a0', steps:[0.6,0,0.5,0,0.5,0,0.6,0,0.5,0,0.5,0] },
       // Rasgueo de guitarra: patron choteño similar al albazo pero con swing africano
-      { name:'Rasgueo',      midi:54, color:'#c0f8d0', steps:[1,1,0,1,0,0,1,1,0,1,0,0] },
+      { name:'Rasgueo',      midi:54, color:'#c0f8d0', steps:[0.75,0.55,0,0.65,0,0,0.75,0.55,0,0.65,0,0] },
     ]
   },
 
@@ -1126,15 +1126,15 @@ const RHYTHMS = [
     compas:'12/8', steps:24, bpm:100,
     tracks:[
       // Gankogui (cencerro doble): la clave de 12/8 — ANCLA ABSOLUTA
-      { name:'Gankogui',  midi:56, color:'#f0c030', steps:[1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0] },
+      { name:'Gankogui',  midi:56, color:'#f0c030', steps:[1,0,0,0,0.75,0,0,0,0.75,0,0.75,0,0,0,0.75,0,0,0,0.75,0,0,0,0.75,0] },
       // Kagan (tambor alto): contrapunto rapido
-      { name:'Kagan',     midi:54, color:'#c09020', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Kagan',     midi:54, color:'#c09020', steps:[0.55,0,0.5,0,0.55,0,0.5,0,0.55,0,0.5,0,0.55,0,0.5,0,0.55,0,0.5,0,0.55,0,0.5,0] },
       // Kidi (tambor medio): ritmo de respuesta
-      { name:'Kidi',      midi:60, color:'#a07010', steps:[0,0,1,0,0,1,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,1,0,0] },
+      { name:'Kidi',      midi:60, color:'#a07010', steps:[0,0,0.7,0,0,0.7,0,0,0,0.7,0,0,0,0,0.7,0,0,0.7,0,0,0,0.7,0,0] },
       // Sogo (tambor grave): base
-      { name:'Sogo',      midi:36, color:'#806010', steps:[1,0,0,0,1,0,0,1,0,0,1,0,1,0,0,0,1,0,0,1,0,0,1,0] },
+      { name:'Sogo',      midi:36, color:'#806010', steps:[0.9,0,0,0,0.8,0,0,0.85,0,0,0.8,0,0.9,0,0,0,0.8,0,0,0.85,0,0,0.8,0] },
       // Vuvi (cascabeles): textura continua
-      { name:'Vuvi',      midi:70, color:'#e8e080', steps:[1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0] },
+      { name:'Vuvi',      midi:70, color:'#e8e080', steps:[0.55,0.45,0,0.55,0.45,0,0.55,0.45,0,0.55,0.45,0,0.55,0.45,0,0.55,0.45,0,0.55,0.45,0,0.55,0.45,0] },
     ]
   },
 
@@ -1143,13 +1143,13 @@ const RHYTHMS = [
     compas:'4/4', steps:16, bpm:88,
     tracks:[
       // Qraqeb (castanuelas metal): patron de 8 hits asimetrico — IDENTIDAD
-      { name:'Qraqeb',    midi:56, color:'#00c8a0', steps:[1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1] },
+      { name:'Qraqeb',    midi:56, color:'#00c8a0', steps:[0.9,0,0.6,0,0,0.65,0,0.9,0,0,0.6,0,0.85,0,0,0.65] },
       // Tbel (bombo grande): marca los tiempos fuertes con peso
-      { name:'Tbel',      midi:36, color:'#009870', steps:[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0] },
+      { name:'Tbel',      midi:36, color:'#009870', steps:[1,0,0,0,0.9,0,0,0,1,0,0,0,0.9,0,0,0] },
       // Guembri (bajo): patron sincopado de 3 notas
-      { name:'Guembri',   midi:35, color:'#00f8c0', steps:[1,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0] },
+      { name:'Guembri',   midi:35, color:'#00f8c0', steps:[0.85,0,0,0.75,0,0,0.8,0,0,0,0.75,0,0,0.8,0,0] },
       // Palmas: refuerzan la subdivision ternaria implicita
-      { name:'Palmas',    midi:39, color:'#80f8d8', steps:[0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0] },
+      { name:'Palmas',    midi:39, color:'#80f8d8', steps:[0,0,0.6,0,0,0,0.6,0,0,0,0.6,0,0,0,0.6,0] },
     ]
   },
 
@@ -1158,13 +1158,13 @@ const RHYTHMS = [
     compas:'6/8', steps:12, bpm:92,
     tracks:[
       // Manman (tambor madre): voz grave que abre el espacio
-      { name:'Manman',    midi:36, color:'#4040e0', steps:[1,0,0,0,0,1,0,0,1,0,0,0] },
+      { name:'Manman',    midi:36, color:'#4040e0', steps:[1,0,0,0,0,0.85,0,0,0.9,0,0,0] },
       // Segond (segundo): dialogo con la madre
-      { name:'Segond',    midi:60, color:'#2020c0', steps:[0,1,0,1,0,0,0,1,0,1,0,0] },
+      { name:'Segond',    midi:60, color:'#2020c0', steps:[0,0.65,0,0.7,0,0,0,0.65,0,0.7,0,0] },
       // Kata (clave): el esqueleto del Yanvalou
-      { name:'Kata',      midi:75, color:'#8080f8', steps:[1,0,1,0,1,0,0,1,0,1,0,0] },
+      { name:'Kata',      midi:75, color:'#8080f8', steps:[0.6,0,0.55,0,0.6,0,0,0.55,0,0.6,0,0] },
       // Ogan (campana): pulso constante, guia al lwa
-      { name:'Ogan',      midi:56, color:'#c0c0ff', steps:[1,0,0,1,0,0,1,0,0,1,0,0] },
+      { name:'Ogan',      midi:56, color:'#c0c0ff', steps:[0.8,0,0,0.75,0,0,0.8,0,0,0.75,0,0] },
     ]
   },
 
@@ -1179,30 +1179,29 @@ const RHYTHMS = [
       // Kick: patron irregular — NO en todos los tiempos, eso es lo que lo hace Gqom
       { name:'Kick',      midi:36, color:'#ff2040', steps:[1,0,0,0,1,0,1,0,0,1,0,0,1,0,0,0] },
       // Hi-hat: patron asimetrico, casi aleatorio — NO cuantizado
-      { name:'Hi-hat',    midi:42, color:'#ff6080', steps:[0,0,1,0,0,1,0,0,1,0,0,0,1,0,1,0] },
+      { name:'Hi-hat',    midi:42, color:'#ff6080', steps:[0,0,0.6,0,0,0.5,0,0,0.7,0,0,0,0.55,0,0.65,0] },
       // Clap: refuerzo irregular
-      { name:'Clap',      midi:39, color:'#ff9090', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1] },
+      { name:'Clap',      midi:39, color:'#ff9090', steps:[0,0,0,0,0.85,0,0,0,0,0,0,0,0.85,0,0,0.8] },
       // Sub (bajo sintetico como percusion): el peso que define el Gqom
       { name:'Sub',       midi:35, color:'#c00020', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
       // Clave africana: el link con la tradicion
-      { name:'Clave',     midi:56, color:'#ff4060', steps:[1,0,0,1,0,0,1,0,0,0,1,0,1,0,0,0] },
+      { name:'Clave',     midi:56, color:'#ff4060', steps:[0.65,0,0,0.6,0,0,0.65,0,0,0,0.6,0,0.65,0,0,0] },
     ]
   },
 
-  { id:'kecak', name:'Kecak / Polyrhythm', origin:'Bali - Indonesia / Global Ritual', flag:'🌏',
-    desc:'Basado en el coro de voces del Kecak balines — 150 hombres construyendo capas de "cak" en ritmos de 2, 3, 4 y 6 simultaneos. Extraido como patron de percusion ritual: 4 voces en polirritmo puro. El tipo de textura que Aphex Twin y Autechre han samplado y reinterpretado. Material SANTSA.',
+  { id:'kecak', name:'Kecak / Kilitan Telu', origin:'Bali - Indonesia / Global Ritual', flag:'🌏',
+    desc:'El interlocking real del kecak balines: kilitan telu — tres voces cantando el MISMO patron desplazado un pulso entre si, llenando los huecos del otro. El resultado: un rio continuo de "cak" donde el acento rota. Debajo, el gong cruza en 3 contra los 4 tiempos del pung — polirritmo 3:4 genuino. Usa los botones S para escuchar cada voz sola y luego el tejido completo.',
     compas:'12/8', steps:24, bpm:96,
     tracks:[
-      // Capa de 2 (cada 12 pasos): el pulso base
-      { name:'Capa-2',    midi:56, color:'#e06000', steps:[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0] },
-      // Capa de 3 (cada 8 pasos): ritmo ternario
-      { name:'Capa-3',    midi:60, color:'#c04000', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
-      // Capa de 4 (cada 6 pasos): ritmo cuaternario
-      { name:'Capa-4',    midi:64, color:'#f08020', steps:[1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0] },
-      // Capa de 6 (cada 4 pasos): subdivision rapida
-      { name:'Capa-6',    midi:38, color:'#f8b060', steps:[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0] },
-      // Bombo: refuerza el cruce de todas las capas en el LCM
-      { name:'Bombo',     midi:36, color:'#804000', steps:[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] },
+      // Kilitan telu: mismo patron [X,X,.] desplazado un pulso por voz
+      // Juntas cubren todo el grid con 2 voces por paso — el acento rota
+      { name:'Cak 1',      midi:54, color:'#e06000', steps:[0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0] },
+      { name:'Cak 2',      midi:60, color:'#c04000', steps:[0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6] },
+      { name:'Cak 3',      midi:64, color:'#f08020', steps:[0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9,0.6,0,0.9] },
+      // Pung: el guardian del tiempo — 4 tiempos (negras con punto)
+      { name:'Pung (4)',   midi:56, color:'#f8b060', steps:[0.8,0,0,0,0,0,0.8,0,0,0,0,0,0.8,0,0,0,0,0,0.8,0,0,0,0,0] },
+      // Gong: ciclo de 3 contra los 4 del pung — solo se encuentran en el paso 0
+      { name:'Gong (3)',   midi:36, color:'#804000', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
     ]
   },
 
@@ -1214,10 +1213,10 @@ const RHYTHMS = [
     desc:'La despedida del carnaval andino, en 2/4 rápido. De la familia del huayno pero más urgente — se toca cuando la fiesta termina y hay que decir adiós. Sikuris, bombo y caja marchando.',
     compas:'2/4', steps:16, bpm:138,
     tracks:[
-      { name:'Bombo',    midi:36, color:'#e07020', steps:[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0] },
-      { name:'Caja',     midi:38, color:'#b05010', steps:[1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1] },
-      { name:'Chajchas', midi:70, color:'#f0a060', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
-      { name:'Platillo', midi:49, color:'#f8d0a0', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
+      { name:'Bombo',    midi:36, color:'#e07020', steps:[1,0,0,0,0.85,0,0,0,0.95,0,0,0,0.85,0,0,0] },
+      { name:'Caja',     midi:38, color:'#b05010', steps:[0.9,0,0.5,0.55,0.9,0,0.5,0.55,0.9,0,0.5,0.55,0.9,0,0.5,0.55] },
+      { name:'Chajchas', midi:70, color:'#f0a060', steps:[0.65,0,0.5,0,0.65,0,0.5,0,0.65,0,0.5,0,0.65,0,0.5,0] },
+      { name:'Platillo', midi:49, color:'#f8d0a0', steps:[0.8,0,0,0,0,0,0,0,0.8,0,0,0,0,0,0,0] },
     ]
   },
 
@@ -1225,10 +1224,10 @@ const RHYTHMS = [
     desc:'El ritmo de los villancicos andinos en 2/4 — "Dulce Jesús mío" es su himno en Ecuador. Suave y mecido, con el bombo marcando el 1 y el contragolpe en el "y del 2". Chuquisaca lo reclama también.',
     compas:'2/4', steps:16, bpm:88,
     tracks:[
-      { name:'Bombo',    midi:36, color:'#40b080', steps:[1,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0] },
-      { name:'Caja',     midi:38, color:'#208860', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
-      { name:'Rasgueo',  midi:54, color:'#80e0b0', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
-      { name:'Quena',    midi:74, color:'#c0f8e0', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
+      { name:'Bombo',    midi:36, color:'#40b080', steps:[0.85,0,0,0,0,0,0.6,0,0.8,0,0,0,0,0,0.6,0] },
+      { name:'Caja',     midi:38, color:'#208860', steps:[0,0,0,0,0.55,0,0,0,0,0,0,0,0.55,0,0,0] },
+      { name:'Rasgueo',  midi:54, color:'#80e0b0', steps:[0.6,0,0.45,0,0.6,0,0.45,0,0.6,0,0.45,0,0.6,0,0.45,0] },
+      { name:'Quena',    midi:74, color:'#c0f8e0', steps:[0,0,0,0,0.7,0,0,0,0,0,0,0,0.7,0,0,0] },
     ]
   },
 
@@ -1236,10 +1235,10 @@ const RHYTHMS = [
     desc:'Baile nacional de Chile, en 6/8 con sesquiáltera: las palmas cruzan en 3/4 contra el rasgueo en 6/8 — esa tensión es la cueca entera. El pandero cuequero rellena con sus tres golpes.',
     compas:'6/8', steps:12, bpm:92,
     tracks:[
-      { name:'Bombo',       midi:36, color:'#d03030', steps:[1,0,0,0,0,0,1,0,0,0,0,0] },
-      { name:'Palmas (3/4)',midi:39, color:'#f06060', steps:[1,0,0,0,1,0,0,0,1,0,0,0] },
-      { name:'Rasgueo',     midi:54, color:'#f8a0a0', steps:[1,0,0,1,0,1,1,0,0,1,0,1] },
-      { name:'Pandero',     midi:60, color:'#f8d0d0', steps:[1,1,0,1,1,0,1,1,0,1,1,0] },
+      { name:'Bombo',       midi:36, color:'#d03030', steps:[0.9,0,0,0,0,0,0.85,0,0,0,0,0] },
+      { name:'Palmas (3/4)',midi:39, color:'#f06060', steps:[0.95,0,0,0,0.9,0,0,0,0.9,0,0,0] },
+      { name:'Rasgueo',     midi:54, color:'#f8a0a0', steps:[0.8,0,0,0.6,0,0.65,0.8,0,0,0.6,0,0.65] },
+      { name:'Pandero',     midi:60, color:'#f8d0d0', steps:[0.7,0.5,0,0.7,0.5,0,0.7,0.5,0,0.7,0.5,0] },
     ]
   },
 
@@ -1247,10 +1246,10 @@ const RHYTHMS = [
     desc:'Danza de pañuelos del altiplano y el noroeste argentino, en 6/8. Prima de la cueca pero más íntima. El bombo legüero marca los tiempos, el charango teje corcheas por encima.',
     compas:'6/8', steps:12, bpm:88,
     tracks:[
-      { name:'Bombo legüero', midi:36, color:'#a06830', steps:[1,0,0,1,0,0,1,0,0,1,0,0] },
-      { name:'Caja',          midi:38, color:'#805020', steps:[0,0,1,0,1,0,0,0,1,0,1,0] },
-      { name:'Charango',      midi:54, color:'#e0b070', steps:[1,0,1,0,1,0,1,0,1,0,1,0] },
-      { name:'Palmas',        midi:39, color:'#f8e0b0', steps:[0,1,0,0,1,0,0,1,0,0,1,0] },
+      { name:'Bombo legüero', midi:36, color:'#a06830', steps:[1,0,0,0.75,0,0,0.9,0,0,0.75,0,0] },
+      { name:'Caja',          midi:38, color:'#805020', steps:[0,0,0.6,0,0.65,0,0,0,0.6,0,0.65,0] },
+      { name:'Charango',      midi:54, color:'#e0b070', steps:[0.7,0,0.5,0,0.5,0,0.7,0,0.5,0,0.5,0] },
+      { name:'Palmas',        midi:39, color:'#f8e0b0', steps:[0,0.55,0,0,0.55,0,0,0.55,0,0,0.55,0] },
     ]
   },
 
@@ -1259,9 +1258,9 @@ const RHYTHMS = [
     compas:'2/4', steps:16, bpm:124,
     tracks:[
       { name:'Bombo',      midi:36, color:'#c02020', steps:[1,0,0,0,1,0,1,0,1,0,0,0,1,0,1,0] },
-      { name:'Redoblante', midi:38, color:'#902010', steps:[1,0.5,0.5,0.5,1,0.5,0.5,0.5,1,0.5,0.5,0.5,1,0.5,0.5,0.5] },
-      { name:'Chajchas',   midi:70, color:'#f07050', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
-      { name:'Zampoña',    midi:74, color:'#f8b090', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
+      { name:'Redoblante', midi:38, color:'#902010', steps:[0.9,0.4,0.4,0.45,0.9,0.4,0.4,0.45,0.9,0.4,0.4,0.45,0.9,0.4,0.4,0.45] },
+      { name:'Chajchas',   midi:70, color:'#f07050', steps:[0.6,0,0.45,0,0.6,0,0.45,0,0.6,0,0.45,0,0.6,0,0.45,0] },
+      { name:'Zampoña',    midi:74, color:'#f8b090', steps:[0.8,0,0,0,0,0,0,0,0.8,0,0,0,0,0,0,0] },
     ]
   },
 
@@ -1269,10 +1268,10 @@ const RHYTHMS = [
     desc:'Ritmo de las comunidades afrobolivianas de los Yungas, en 2/4 con base de tresillo. Los bombos dialogan mientras la cuancha (raspa) y los cascabeles sostienen. Raíz africana en los Andes.',
     compas:'2/4', steps:16, bpm:104,
     tracks:[
-      { name:'Bombo mayor', midi:36, color:'#209060', steps:[1,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0] },
-      { name:'Bombo menor', midi:35, color:'#106040', steps:[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
-      { name:'Cuancha',     midi:70, color:'#60d0a0', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
-      { name:'Cascabeles',  midi:54, color:'#b0f0d0', steps:[0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0] },
+      { name:'Bombo mayor', midi:36, color:'#209060', steps:[1,0,0,0.7,0,0,0.75,0,1,0,0,0.7,0,0,0.75,0] },
+      { name:'Bombo menor', midi:35, color:'#106040', steps:[0,0,0,0,0.7,0,0,0,0,0,0,0,0.7,0,0,0] },
+      { name:'Cuancha',     midi:70, color:'#60d0a0', steps:[0.65,0,0.5,0,0.65,0,0.5,0,0.65,0,0.5,0,0.65,0,0.5,0] },
+      { name:'Cascabeles',  midi:54, color:'#b0f0d0', steps:[0,0,0.55,0,0,0,0.55,0,0,0,0.55,0,0,0,0.55,0] },
     ]
   },
 
@@ -1280,10 +1279,10 @@ const RHYTHMS = [
     desc:'Danza carnavalera derivada de la saya, en 2/4 veloz. Los cascabeles de las botas suenan en cada corchea — ese cascabeleo constante más el salto del bailarín definen al caporal.',
     compas:'2/4', steps:16, bpm:126,
     tracks:[
-      { name:'Bombo',      midi:36, color:'#3050d0', steps:[1,0,0,0,1,0,1,0,1,0,0,0,1,0,1,0] },
-      { name:'Tarola',     midi:38, color:'#2030a0', steps:[0.5,0.5,1,0.5,0.5,0.5,1,0.5,0.5,0.5,1,0.5,0.5,0.5,1,0.5] },
-      { name:'Cascabeles', midi:70, color:'#7090f0', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
-      { name:'Matraca',    midi:73, color:'#b0c8f8', steps:[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
+      { name:'Bombo',      midi:36, color:'#3050d0', steps:[0.95,0,0,0,0.9,0,0.95,0,0.95,0,0,0,0.9,0,0.95,0] },
+      { name:'Tarola',     midi:38, color:'#2030a0', steps:[0.4,0.4,0.9,0.4,0.4,0.4,0.9,0.4,0.4,0.4,0.9,0.4,0.4,0.4,0.9,0.4] },
+      { name:'Cascabeles', midi:70, color:'#7090f0', steps:[0.75,0,0.55,0,0.75,0,0.55,0,0.75,0,0.55,0,0.75,0,0.55,0] },
+      { name:'Matraca',    midi:73, color:'#b0c8f8', steps:[0.8,0,0,0,0,0,0,0,0.8,0,0,0,0,0,0,0] },
     ]
   },
 
@@ -1295,10 +1294,10 @@ const RHYTHMS = [
     desc:'El ritmo andino colombiano por excelencia, en 6/8 con sesquiáltera. Su firma es el "esquive": la tambora entra desplazada, fuera del tiempo fuerte, mientras el tiple cruza en 3/4. Siglos de debate sobre cómo escribirlo.',
     compas:'6/8', steps:12, bpm:88,
     tracks:[
-      { name:'Tambora (esquive)', midi:36, color:'#e0a020', steps:[0,0,1,0,0,0,0,0,1,0,0,0] },
-      { name:'Tiple (3/4)',       midi:54, color:'#c08010', steps:[1,0,0,0,1,0,0,0,1,0,0,0] },
-      { name:'Esterilla',         midi:70, color:'#f0d080', steps:[1,0,1,0,1,0,1,0,1,0,1,0] },
-      { name:'Palmas',            midi:39, color:'#f8f0c0', steps:[0,0,0,0,1,0,0,0,0,0,1,0] },
+      { name:'Tambora (esquive)', midi:36, color:'#e0a020', steps:[0,0,0.9,0,0,0,0,0,0.9,0,0,0] },
+      { name:'Tiple (3/4)',       midi:54, color:'#c08010', steps:[0.85,0,0,0,0.7,0,0,0,0.7,0,0,0] },
+      { name:'Esterilla',         midi:70, color:'#f0d080', steps:[0.55,0,0.45,0,0.45,0,0.55,0,0.45,0,0.45,0] },
+      { name:'Palmas',            midi:39, color:'#f8f0c0', steps:[0,0,0,0,0.65,0,0,0,0,0,0.65,0] },
     ]
   },
 
@@ -1306,10 +1305,10 @@ const RHYTHMS = [
     desc:'Ritmo festivo de las bandas papayeras del Caribe colombiano, en 4/4. Primo veloz del porro y el paseo — puro aire de fiesta de pueblo con bombo, redoblante y platillos.',
     compas:'4/4', steps:16, bpm:112,
     tracks:[
-      { name:'Bombo',      midi:36, color:'#f08030', steps:[1,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0] },
-      { name:'Redoblante', midi:38, color:'#c06020', steps:[0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0] },
-      { name:'Platillos',  midi:49, color:'#f8b080', steps:[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0] },
-      { name:'Maracas',    midi:70, color:'#f8d8b0', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Bombo',      midi:36, color:'#f08030', steps:[0.95,0,0,0,0,0,0.8,0,0.95,0,0,0,0,0,0.8,0] },
+      { name:'Redoblante', midi:38, color:'#c06020', steps:[0,0,0.7,0,0,0,0.7,0,0,0,0.7,0,0,0,0.7,0] },
+      { name:'Platillos',  midi:49, color:'#f8b080', steps:[0.85,0,0,0,0.7,0,0,0,0.85,0,0,0,0.7,0,0,0] },
+      { name:'Maracas',    midi:70, color:'#f8d8b0', steps:[0.6,0,0.5,0,0.6,0,0.5,0,0.6,0,0.5,0,0.6,0,0.5,0] },
     ]
   },
 
@@ -1317,10 +1316,10 @@ const RHYTHMS = [
     desc:'El ritmo de Misiones, creado por Ramón Ayala en 12/8 — dos compases de 6/8 fundidos en uno. Tierra colorada, río y selva: el rasgueo cruza en 3/4 mientras el bombo ancla los cuatro tiempos.',
     compas:'12/8', steps:24, bpm:76,
     tracks:[
-      { name:'Bombo',    midi:36, color:'#c04040', steps:[1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0] },
-      { name:'Rasgueo (3/4)', midi:54, color:'#903030', steps:[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0] },
-      { name:'Golpe',    midi:38, color:'#f08080', steps:[0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0] },
-      { name:'Chas-chas',midi:70, color:'#f8c0c0', steps:[1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0] },
+      { name:'Bombo',    midi:36, color:'#c04040', steps:[1,0,0,0,0,0,0.85,0,0,0,0,0,0.9,0,0,0,0,0,0.85,0,0,0,0,0] },
+      { name:'Rasgueo (3/4)', midi:54, color:'#903030', steps:[0.8,0,0,0,0.65,0,0,0,0.65,0,0,0,0.8,0,0,0,0.65,0,0,0,0.65,0,0,0] },
+      { name:'Golpe',    midi:38, color:'#f08080', steps:[0,0,0,0,0,0,0,0,0,0,0.8,0,0,0,0,0,0,0,0,0,0,0,0.8,0] },
+      { name:'Chas-chas',midi:70, color:'#f8c0c0', steps:[0.55,0,0.45,0,0.55,0,0.45,0,0.55,0,0.45,0,0.55,0,0.45,0,0.55,0,0.45,0,0.55,0,0.45,0] },
     ]
   },
 
@@ -1329,9 +1328,9 @@ const RHYTHMS = [
     compas:'12/8', steps:24, bpm:66,
     tracks:[
       { name:'Cajón grave', midi:36, color:'#8050c0', steps:[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0] },
-      { name:'Cajón slap',  midi:38, color:'#6030a0', steps:[0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0] },
-      { name:'Quijada',     midi:70, color:'#b090e0', steps:[0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0] },
-      { name:'Palmas (6/4)',midi:39, color:'#e0d0f8', steps:[0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] },
+      { name:'Cajón slap',  midi:38, color:'#6030a0', steps:[0,0,0,0,0,0,0.8,0,0,0,0,0,0,0,0,0,0.85,0,0,0,0.95,0,0,0] },
+      { name:'Quijada',     midi:70, color:'#b090e0', steps:[0,0,0,0,0,0,0.65,0,0,0,0,0,0,0,0,0,0,0,0.7,0,0,0,0,0] },
+      { name:'Palmas (6/4)',midi:39, color:'#e0d0f8', steps:[0,0,0,0,0.6,0,0,0,0,0,0,0,0,0,0,0,0.6,0,0,0,0,0,0,0] },
     ]
   },
 
@@ -1339,10 +1338,10 @@ const RHYTHMS = [
     desc:'El 12/8 sagrado afrocubano, corazón de las fiestas de santo. Su campana toca EL patrón de África Occidental — el mismo del gankogui ewe, viajado por el Atlántico. Tumbadoras y shekere responden entre los golpes del bell.',
     compas:'12/8', steps:24, bpm:108,
     tracks:[
-      { name:'Campana',    midi:56, color:'#e0b020', steps:[1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0] },
-      { name:'Tumbadora',  midi:36, color:'#a08010', steps:[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0,0,0] },
-      { name:'Conga',      midi:64, color:'#f0d060', steps:[0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0] },
-      { name:'Shekere',    midi:70, color:'#f8f0b0', steps:[1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0] },
+      { name:'Campana',    midi:56, color:'#e0b020', steps:[1,0,0,0,0.75,0,0,0,0.75,0,0.75,0,0,0,0.75,0,0,0,0.75,0,0,0,0.75,0] },
+      { name:'Tumbadora',  midi:36, color:'#a08010', steps:[0.85,0,0,0,0,0,0,0,0,0,0,0,0.85,0,0,0,0,0,0.8,0,0.9,0,0,0] },
+      { name:'Conga',      midi:64, color:'#f0d060', steps:[0,0,0.65,0,0,0,0,0,0.65,0,0,0,0,0,0.65,0,0,0,0,0,0,0,0.65,0] },
+      { name:'Shekere',    midi:70, color:'#f8f0b0', steps:[0.75,0,0,0,0,0,0.7,0,0,0,0,0,0.75,0,0,0,0,0,0.7,0,0,0,0,0] },
     ]
   },
 ];
@@ -1684,7 +1683,7 @@ function buildGrid(r) {
       s.className = 'step' + (on?' on':'') + (i%beatGroup===0?' beat-marker':'');
       s.id = `step-${r.id}-${track.midi}-${i}`;
       s.style.cssText = `--step-color:${track.color}`;
-      if(on) s.style.background = track.color;
+      if(on) { s.style.background = track.color; s.style.opacity = String(0.4 + 0.6*Math.min(1,on)); }
       const dot = document.createElement('div');
       dot.className = 'offset-dot';
       s.appendChild(dot);
@@ -1702,6 +1701,7 @@ function toggleStep(el, track, i, r) {
   track.steps[i] = track.steps[i] ? 0 : 1;
   el.classList.toggle('on', !!track.steps[i]);
   el.style.background = track.steps[i] ? track.color : '';
+  el.style.opacity = track.steps[i] ? '1' : '';
   updateStepOffsetDots(r);
   drawPianoRoll(r);
 }
@@ -1774,7 +1774,8 @@ function drawPianoRoll(r) {
       const nw = stepW-2;
       const nh = noteH-2;
 
-      ctx.fillStyle = t.color+'28';
+      const velAlpha = Math.round(35 + 150*Math.min(1,on)).toString(16).padStart(2,'0');
+      ctx.fillStyle = t.color+velAlpha;
       ctx.fillRect(x, y, nw, nh);
       ctx.fillStyle = t.color;
       ctx.fillRect(x, y, 3, nh);
@@ -1887,7 +1888,7 @@ function tick() {
     const si = stepIdx % track.steps.length;
     const stepVal = track.steps[si];
     if(stepVal) {
-      const vel = stepVal===0.5 ? 0.4 : 0.85;
+      const vel = Math.min(1, stepVal) * 0.92;
       const offsetMs = getOffset(r.id, track.midi, si);
 
       // Apply offset: negative = schedule now (early) or delay (late)
@@ -2001,7 +2002,7 @@ function exportMIDI() {
         : 0;
       const offsetTicks = msToTicks(offsetMs, bpm);
       const tick = Math.max(0, baseTick + offsetTicks);
-      const vel = on===0.5 ? 40 : 100;
+      const vel = Math.max(20, Math.min(127, Math.round(on * 118)));
       events.push({ tick, type:'noteOn',  ch:9, note:track.midi, vel });
       events.push({ tick:tick+ticksPerStep-8, type:'noteOff', ch:9, note:track.midi, vel:0 });
     });
